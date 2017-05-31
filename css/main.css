@@ -2,8 +2,6 @@
 Base Element Styles
 ===========================*/
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -24,7 +22,7 @@ p, label {
 
 .container {
   max-width: 100%;
-  padding: 0 1em 1em;
+  padding: 0 1em 3em;
   margin: 0;
   background: #f4f7f8;
 }
@@ -44,29 +42,24 @@ a {
 ==================================== */
 header {
   background:
-              linear-gradient(#25ef80, transparent 90%),
-              linear-gradient(90deg, #8cf2ba, transparent),
-              #25ef80 url(../img/informatics.jpg) center;
+              linear-gradient(#4bc970, transparent 90%),
+              #4bc970 url(../img/informatics.jpg) center;
   background-size: cover;
   padding: 20px 0;
 	text-align: center;
-  height: 100px;
+  height: auto;
+  z-index: 3;
 }
 
-header h1 {
+.title {
   margin: 0;
-}
-
-header h1 a {
-  margin: 0;
-  color: #fff;
+  color: azure;
   text-transform: uppercase;
 }
 
 /* =================================
   Tagline
 ==================================== */
-
 .tagline {
   padding: .83em 0;
   text-align: center;
@@ -119,7 +112,7 @@ select {
 }
 
 .contact-details input:placeholder-shown {
-  opacity: .9;
+  opacity: .6;
   font-style: italic;
   text-align: center;
 }
@@ -127,13 +120,12 @@ select {
 .contact-details input:focus,
 .contact-details select:focus,
 .newsletter textarea:focus {
-  outline: none;
+  background: #d7fccf;
+  font-size: 1em;
   transition: all .5s;
-	width: 100%;
-	margin: 0 0 20px 0;
-	box-shadow: none;
-	border-bottom: 2px solid #0fd812;
 }
+
+
 
 input[type="radio"],
 input[type="checkbox"] {
@@ -172,6 +164,7 @@ button {
 }
 
 .copyright {
+  margin-top: 3em;
   text-align: center;
   font-weight: bold;
 }
@@ -199,8 +192,8 @@ button {
   }
 
   .contact-details input:placeholder-shown {
-    font-style: normal;
-    text-align: right;
+      font-style: normal;
+      text-align: right;
   }
 
 }
